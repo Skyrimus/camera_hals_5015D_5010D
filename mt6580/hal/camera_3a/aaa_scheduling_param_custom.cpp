@@ -77,7 +77,7 @@ WorkPerCycle getWorkPerCycle(int normalizeM, MUINT32 senDevId) // M = fps/30
     case 0x04: // SENSOR_DEV_MAIN_2 = 0x04
         return getWorkPerCycle_Main2(normalizeM);
     default:
-        return getWorkPerCycle_Main(normalizeM);
+        break;
     }
     return getWorkPerCycle_Main(normalizeM);
 }
@@ -93,7 +93,7 @@ MVOID resetCycleCtr(MUINT32 senDevId) //M = fps/30
     case 0x04: // SENSOR_DEV_MAIN_2 = 0x04
         return resetCycleCtr_Main2();
     default:
-        return resetCycleCtr_Main();
+        break;
     }
     return resetCycleCtr_Main();
 }
@@ -109,7 +109,7 @@ int get3AThreadNiceValue(MUINT32 senDevId)
     case 0x04: // SENSOR_DEV_MAIN_2 = 0x04
         return -8;
     default:
-        return -8;
+        break;
     }
     return -8;
 }
@@ -141,7 +141,7 @@ long long int getVsTimeOutLimit_ns(int normalizeM, int fps/*x1000*/)
     case 4:
         return (long long int) 5000000;
     default:
-        return (long long int) 5000000; //shortest
+        break;
     }
     return     (long long int) 5000000; //shortest
 }
@@ -172,7 +172,7 @@ long long int getAEThreadVsTimeOutLimit_ns(int normalizeM, int fps/*x1000*/)
     case 4:
         return (long long int) 5000000;
     default:
-        return (long long int) 5000000; //shortest
+        break;
     }
     return     (long long int) 5000000; //shortest
 }
@@ -195,7 +195,7 @@ int getResetFrameCount(MUINT32 senDevId)
     case 0x04: // SENSOR_DEV_MAIN_2 = 0x04
         return -2;
     default:
-        return -3; //conservative
+        break;
     }
     return -3; //conservative
 }

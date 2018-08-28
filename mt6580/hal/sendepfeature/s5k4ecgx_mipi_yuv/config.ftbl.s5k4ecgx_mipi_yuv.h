@@ -205,31 +205,6 @@ FTABLE_SCENE_INDEP()
 #endif
     //==========================================================================
 #if 1
-    //  Video Stabilization (EIS)
-#if (1 == EIS_SUPPORTED)
-    FTABLE_CONFIG_AS_TYPE_OF_DEFAULT_SUPPORTED(
-        KEY_AS_(MtkCameraParameters::KEY_VIDEO_STABILIZATION),
-        SCENE_AS_DEFAULT_SCENE(
-            ITEM_AS_DEFAULT_(MtkCameraParameters::FALSE),
-            ITEM_AS_SUPPORTED_(
-                MtkCameraParameters::TRUE
-            )
-        ),
-    )
-#else
-    FTABLE_CONFIG_AS_TYPE_OF_DEFAULT_SUPPORTED(
-        KEY_AS_(MtkCameraParameters::KEY_VIDEO_STABILIZATION),
-        SCENE_AS_DEFAULT_SCENE(
-            ITEM_AS_DEFAULT_(MtkCameraParameters::FALSE),
-            ITEM_AS_SUPPORTED_(
-                MtkCameraParameters::FALSE
-            )
-        ),
-    )
-#endif
-#endif
-    //==========================================================================
-#if 1
     //  Zoom
     FTABLE_CONFIG_AS_TYPE_OF_USER(
         KEY_AS_(MtkCameraParameters::KEY_ZOOM),
@@ -252,7 +227,9 @@ FTABLE_SCENE_INDEP()
         SCENE_AS_DEFAULT_SCENE(
             ITEM_AS_DEFAULT_(MtkCameraParameters::OFF),
             ITEM_AS_VALUES_(
+                #if ZSD_MODE_SUPPORT
                 MtkCameraParameters::ON,
+                #endif
                 MtkCameraParameters::OFF,
             )
         ),
@@ -268,7 +245,9 @@ FTABLE_SCENE_INDEP()
             ITEM_AS_VALUES_(
                 MtkCameraParameters::CAPTURE_MODE_NORMAL,
                 MtkCameraParameters::CAPTURE_MODE_FACE_BEAUTY,
+                #if CONTINUOUS_SHOT_SUPPORTED
                 MtkCameraParameters::CAPTURE_MODE_CONTINUOUS_SHOT,
+                #endif
                 MtkCameraParameters::CAPTURE_MODE_SMILE_SHOT,
                 MtkCameraParameters::CAPTURE_MODE_AUTO_PANORAMA_SHOT,
                 MtkCameraParameters::CAPTURE_MODE_MAV_SHOT,

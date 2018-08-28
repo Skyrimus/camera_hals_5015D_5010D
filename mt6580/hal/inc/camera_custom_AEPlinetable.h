@@ -197,7 +197,7 @@ typedef struct
    LIB3A_AE_ISO_SPEED_T   ISOSpeed;
    strEvPline sTable60Hz;   // 50Hz structure table
    strEvPline sTable50Hz;   // 60Hz structure table
-   strEvPline *pCurrentTable __attribute__ ((aligned (8)));      // current structure table
+   strEvPline *pCurrentTable __attribute__ ((aligned (8))); // current structure table
 }strAETable;
 
 typedef struct

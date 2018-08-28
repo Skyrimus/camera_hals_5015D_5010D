@@ -208,15 +208,16 @@ SensorViewAngle_T const&
 getSensorViewAngle()
 {
     static SensorViewAngle_T const inst = {
-#ifdef MAIN_IMX179
-        MainSensorHorFOV  : 63,
+#ifdef MAIN_IMX179_5MP
+        MainSensorHorFOV  : 50,
         MainSensorVerFOV  : 49,
-#else //ov5670 or lese
+#else //imx179 or else
         MainSensorHorFOV  : 63,
         MainSensorVerFOV  : 49,
 #endif
 #ifdef SUB_GC0310
-        SubSensorHorFOV  : 51,
+        SubSensorHorFOV  : 50,
+        /*SPEC give the value is 50+-3% */
         SubSensorVerFOV  : 40,
 #else  //ov5670 or else
         SubSensorHorFOV  : 63,

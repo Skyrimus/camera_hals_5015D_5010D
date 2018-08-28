@@ -167,7 +167,7 @@ MUINT32 u4ISOWorkaroundValue;
 //    ALOGE("[getIVHDRExpSetting] time:%d %d %d %d %d ISO:%d %d %d %d %d u4InputSum:%d\n", u4LE1xExpTimeUs, u4LE2xExpTimeUs, u4LE4xExpTimeUs, u4LE8xExpTimeUs, u4LEMaxExpTimeUs, u4ISO1xThresValue, u4ISO2xThresValue, u4ISO4xThresValue, u4ISO8xThresValue, u4ISOMaxThresValue, u4InputSum);
 
     if((u4LE8xExpTimeUs*u4ISO8xThresValue) >= CUST_IVHDR_8X_RATIO*u4InputSum) {    // 8x
-        for(u4CountIdx=0; (MINT32)(u4LE8xExpTimeUs - u4CountIdx*u4AnitBandingBase) >= u4AnitBandingBase; u4CountIdx++) {
+        for(u4CountIdx=0; (MINT32)(u4LE8xExpTimeUs - u4CountIdx*u4AnitBandingBase) >= (MINT32)u4AnitBandingBase; u4CountIdx++) {
             u4NewExpTimeUs = u4LE8xExpTimeUs - u4CountIdx*u4AnitBandingBase;
 //            ALOGE("[getIVHDRExpSetting] u4CountIdx:%d u4NewExpTimeUs:%d %d %d", u4CountIdx, u4NewExpTimeUs, (u4NewExpTimeUs >>3)*rInput.u4SaturationGain, rInput.u4ShutterTime*rInput.u4SensorGain);
             if((u4NewExpTimeUs*rInput.u4SaturationGain) <= CUST_IVHDR_8X_RATIO*u4InputSum) {
@@ -180,7 +180,7 @@ MUINT32 u4ISOWorkaroundValue;
             }
         }
 
-        if((MINT32)(u4LE8xExpTimeUs - u4CountIdx*u4AnitBandingBase) < u4AnitBandingBase) {
+        if((MINT32)(u4LE8xExpTimeUs - u4CountIdx*u4AnitBandingBase) < (MINT32)u4AnitBandingBase) {
                 rOutput.u4SEExpTimeInUS = u4InputSum / rInput.u4SaturationGain;
                 rOutput.u4SESensorGain = rInput.u4SaturationGain;
                 rOutput.u4LEExpTimeInUS = CUST_IVHDR_8X_RATIO*rOutput.u4SEExpTimeInUS;

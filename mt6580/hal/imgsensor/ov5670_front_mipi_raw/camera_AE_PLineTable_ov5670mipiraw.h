@@ -33,11 +33,11 @@
  * applicable license agreements with MediaTek Inc.
  */
 
-#ifndef _CAMERA_AE_PLINETABLE_OV5670MIPIRAW_H
-#define _CAMERA_AE_PLINETABLE_OV5670MIPIRAW_H
+#ifndef _CAMERA_AE_PLINETABLE_OV5670FRONTMIPIRAW_H
+#define _CAMERA_AE_PLINETABLE_OV5670FRONTMIPIRAW_H
 
 #include "camera_custom_AEPlinetable.h"
-static strEvPline sPreviewPLineTable_60Hz =
+static constexpr strEvPline sPreviewPLineTable_60Hz =
 {
 {
     {98,1216,1024, 0, 0, 0},  //TV = 13.32(4 lines)  AV=2.97  SV=5.01  BV=11.27
@@ -243,7 +243,7 @@ static strEvPline sPreviewPLineTable_60Hz =
 },
 };
 
-static strEvPline sPreviewPLineTable_50Hz =
+static constexpr strEvPline sPreviewPLineTable_50Hz =
 {
 {
     {98,1216,1024, 0, 0, 0},  //TV = 13.32(4 lines)  AV=2.97  SV=5.01  BV=11.27
@@ -449,7 +449,7 @@ static strEvPline sPreviewPLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_PreviewAutoTable =
+static constexpr strAETable g_AE_PreviewAutoTable =
 {
     AETABLE_RPEVIEW_AUTO,    //eAETableID
     157,    //u4TotalIndex
@@ -464,7 +464,7 @@ static strAETable g_AE_PreviewAutoTable =
     NULL,
 };
 
-static strEvPline sCapturePLineTable_60Hz =
+static constexpr strEvPline sCapturePLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -666,7 +666,7 @@ static strEvPline sCapturePLineTable_60Hz =
 },
 };
 
-static strEvPline sCapturePLineTable_50Hz =
+static constexpr strEvPline sCapturePLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -868,7 +868,7 @@ static strEvPline sCapturePLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_CaptureAutoTable =
+static constexpr strAETable g_AE_CaptureAutoTable =
 {
     AETABLE_CAPTURE_AUTO,    //eAETableID
     147,    //u4TotalIndex
@@ -883,7 +883,7 @@ static strAETable g_AE_CaptureAutoTable =
     NULL,
 };
 
-static strEvPline sVideoPLineTable_60Hz =
+static constexpr strEvPline sVideoPLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -1085,7 +1085,7 @@ static strEvPline sVideoPLineTable_60Hz =
 },
 };
 
-static strEvPline sVideoPLineTable_50Hz =
+static constexpr strEvPline sVideoPLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -1287,7 +1287,7 @@ static strEvPline sVideoPLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_VideoAutoTable =
+static constexpr strAETable g_AE_VideoAutoTable =
 {
     AETABLE_VIDEO_AUTO,    //eAETableID
     142,    //u4TotalIndex
@@ -1302,7 +1302,7 @@ static strAETable g_AE_VideoAutoTable =
     NULL,
 };
 
-static strEvPline sVideo1PLineTable_60Hz =
+static constexpr strEvPline sVideo1PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -1500,7 +1500,7 @@ static strEvPline sVideo1PLineTable_60Hz =
 },
 };
 
-static strEvPline sVideo1PLineTable_50Hz =
+static constexpr strEvPline sVideo1PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -1698,7 +1698,7 @@ static strEvPline sVideo1PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_Video1AutoTable =
+static constexpr strAETable g_AE_Video1AutoTable =
 {
     AETABLE_VIDEO1_AUTO,    //eAETableID
     107,    //u4TotalIndex
@@ -1713,7 +1713,7 @@ static strAETable g_AE_Video1AutoTable =
     NULL,
 };
 
-static strEvPline sVideo2PLineTable_60Hz =
+static constexpr strEvPline sVideo2PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -1919,7 +1919,7 @@ static strEvPline sVideo2PLineTable_60Hz =
 },
 };
 
-static strEvPline sVideo2PLineTable_50Hz =
+static constexpr strEvPline sVideo2PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -2125,7 +2125,7 @@ static strEvPline sVideo2PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_Video2AutoTable =
+static constexpr strAETable g_AE_Video2AutoTable =
 {
     AETABLE_VIDEO2_AUTO,    //eAETableID
     116,    //u4TotalIndex
@@ -2140,7 +2140,7 @@ static strAETable g_AE_Video2AutoTable =
     NULL,
 };
 
-static strEvPline sCustom1PLineTable_60Hz =
+static constexpr strEvPline sCustom1PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -2346,7 +2346,7 @@ static strEvPline sCustom1PLineTable_60Hz =
 },
 };
 
-static strEvPline sCustom1PLineTable_50Hz =
+static constexpr strEvPline sCustom1PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -2552,7 +2552,7 @@ static strEvPline sCustom1PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_Custom1AutoTable =
+static constexpr strAETable g_AE_Custom1AutoTable =
 {
     AETABLE_CUSTOM1_AUTO,    //eAETableID
     116,    //u4TotalIndex
@@ -2567,7 +2567,7 @@ static strAETable g_AE_Custom1AutoTable =
     NULL,
 };
 
-static strEvPline sCustom2PLineTable_60Hz =
+static constexpr strEvPline sCustom2PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -2773,7 +2773,7 @@ static strEvPline sCustom2PLineTable_60Hz =
 },
 };
 
-static strEvPline sCustom2PLineTable_50Hz =
+static constexpr strEvPline sCustom2PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -2979,7 +2979,7 @@ static strEvPline sCustom2PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_Custom2AutoTable =
+static constexpr strAETable g_AE_Custom2AutoTable =
 {
     AETABLE_CUSTOM2_AUTO,    //eAETableID
     116,    //u4TotalIndex
@@ -2994,7 +2994,7 @@ static strAETable g_AE_Custom2AutoTable =
     NULL,
 };
 
-static strEvPline sCustom3PLineTable_60Hz =
+static constexpr strEvPline sCustom3PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -3200,7 +3200,7 @@ static strEvPline sCustom3PLineTable_60Hz =
 },
 };
 
-static strEvPline sCustom3PLineTable_50Hz =
+static constexpr strEvPline sCustom3PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -3406,7 +3406,7 @@ static strEvPline sCustom3PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_Custom3AutoTable =
+static constexpr strAETable g_AE_Custom3AutoTable =
 {
     AETABLE_CUSTOM3_AUTO,    //eAETableID
     116,    //u4TotalIndex
@@ -3421,7 +3421,7 @@ static strAETable g_AE_Custom3AutoTable =
     NULL,
 };
 
-static strEvPline sCustom4PLineTable_60Hz =
+static constexpr strEvPline sCustom4PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -3627,7 +3627,7 @@ static strEvPline sCustom4PLineTable_60Hz =
 },
 };
 
-static strEvPline sCustom4PLineTable_50Hz =
+static constexpr strEvPline sCustom4PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -3833,7 +3833,7 @@ static strEvPline sCustom4PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_Custom4AutoTable =
+static constexpr strAETable g_AE_Custom4AutoTable =
 {
     AETABLE_CUSTOM4_AUTO,    //eAETableID
     116,    //u4TotalIndex
@@ -3848,7 +3848,7 @@ static strAETable g_AE_Custom4AutoTable =
     NULL,
 };
 
-static strEvPline sCustom5PLineTable_60Hz =
+static constexpr strEvPline sCustom5PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -4054,7 +4054,7 @@ static strEvPline sCustom5PLineTable_60Hz =
 },
 };
 
-static strEvPline sCustom5PLineTable_50Hz =
+static constexpr strEvPline sCustom5PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(4 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -4260,7 +4260,7 @@ static strEvPline sCustom5PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_Custom5AutoTable =
+static constexpr strAETable g_AE_Custom5AutoTable =
 {
     AETABLE_CUSTOM5_AUTO,    //eAETableID
     116,    //u4TotalIndex
@@ -4275,7 +4275,7 @@ static strAETable g_AE_Custom5AutoTable =
     NULL,
 };
 
-static strEvPline sVideoNightPLineTable_60Hz =
+static constexpr strEvPline sVideoNightPLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -4481,7 +4481,7 @@ static strEvPline sVideoNightPLineTable_60Hz =
 },
 };
 
-static strEvPline sVideoNightPLineTable_50Hz =
+static constexpr strEvPline sVideoNightPLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -4687,7 +4687,7 @@ static strEvPline sVideoNightPLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_VideoNightTable =
+static constexpr strAETable g_AE_VideoNightTable =
 {
     AETABLE_VIDEO_NIGHT,    //eAETableID
     149,    //u4TotalIndex
@@ -4702,7 +4702,7 @@ static strAETable g_AE_VideoNightTable =
     NULL,
 };
 
-static strEvPline sCaptureISO100PLineTable_60Hz =
+static constexpr strEvPline sCaptureISO100PLineTable_60Hz =
 {
 {
     {95,1216,1088, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.10  BV=11.23
@@ -4908,7 +4908,7 @@ static strEvPline sCaptureISO100PLineTable_60Hz =
 },
 };
 
-static strEvPline sCaptureISO100PLineTable_50Hz =
+static constexpr strEvPline sCaptureISO100PLineTable_50Hz =
 {
 {
     {95,1216,1088, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.10  BV=11.23
@@ -5114,7 +5114,7 @@ static strEvPline sCaptureISO100PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_CaptureISO100Table =
+static constexpr strAETable g_AE_CaptureISO100Table =
 {
     AETABLE_CAPTURE_ISO100,    //eAETableID
     111,    //u4TotalIndex
@@ -5129,7 +5129,7 @@ static strAETable g_AE_CaptureISO100Table =
     NULL,
 };
 
-static strEvPline sCaptureISO200PLineTable_60Hz =
+static constexpr strEvPline sCaptureISO200PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -5335,7 +5335,7 @@ static strEvPline sCaptureISO200PLineTable_60Hz =
 },
 };
 
-static strEvPline sCaptureISO200PLineTable_50Hz =
+static constexpr strEvPline sCaptureISO200PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -5541,7 +5541,7 @@ static strEvPline sCaptureISO200PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_CaptureISO200Table =
+static constexpr strAETable g_AE_CaptureISO200Table =
 {
     AETABLE_CAPTURE_ISO200,    //eAETableID
     121,    //u4TotalIndex
@@ -5556,7 +5556,7 @@ static strAETable g_AE_CaptureISO200Table =
     NULL,
 };
 
-static strEvPline sCaptureISO400PLineTable_60Hz =
+static constexpr strEvPline sCaptureISO400PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -5762,7 +5762,7 @@ static strEvPline sCaptureISO400PLineTable_60Hz =
 },
 };
 
-static strEvPline sCaptureISO400PLineTable_50Hz =
+static constexpr strEvPline sCaptureISO400PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -5968,7 +5968,7 @@ static strEvPline sCaptureISO400PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_CaptureISO400Table =
+static constexpr strAETable g_AE_CaptureISO400Table =
 {
     AETABLE_CAPTURE_ISO400,    //eAETableID
     131,    //u4TotalIndex
@@ -5983,7 +5983,7 @@ static strAETable g_AE_CaptureISO400Table =
     NULL,
 };
 
-static strEvPline sCaptureISO800PLineTable_60Hz =
+static constexpr strEvPline sCaptureISO800PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -6189,7 +6189,7 @@ static strEvPline sCaptureISO800PLineTable_60Hz =
 },
 };
 
-static strEvPline sCaptureISO800PLineTable_50Hz =
+static constexpr strEvPline sCaptureISO800PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -6395,7 +6395,7 @@ static strEvPline sCaptureISO800PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_CaptureISO800Table =
+static constexpr strAETable g_AE_CaptureISO800Table =
 {
     AETABLE_CAPTURE_ISO800,    //eAETableID
     141,    //u4TotalIndex
@@ -6410,7 +6410,7 @@ static strAETable g_AE_CaptureISO800Table =
     NULL,
 };
 
-static strEvPline sCaptureISO1600PLineTable_60Hz =
+static constexpr strEvPline sCaptureISO1600PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -6616,7 +6616,7 @@ static strEvPline sCaptureISO1600PLineTable_60Hz =
 },
 };
 
-static strEvPline sCaptureISO1600PLineTable_50Hz =
+static constexpr strEvPline sCaptureISO1600PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -6822,7 +6822,7 @@ static strEvPline sCaptureISO1600PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_CaptureISO1600Table =
+static constexpr strAETable g_AE_CaptureISO1600Table =
 {
     AETABLE_CAPTURE_ISO1600,    //eAETableID
     151,    //u4TotalIndex
@@ -6837,7 +6837,7 @@ static strAETable g_AE_CaptureISO1600Table =
     NULL,
 };
 
-static strEvPline sCaptureStrobePLineTable_60Hz =
+static constexpr strEvPline sCaptureStrobePLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -7043,7 +7043,7 @@ static strEvPline sCaptureStrobePLineTable_60Hz =
 },
 };
 
-static strEvPline sCaptureStrobePLineTable_50Hz =
+static constexpr strEvPline sCaptureStrobePLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -7249,7 +7249,7 @@ static strEvPline sCaptureStrobePLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_StrobeTable =
+static constexpr strAETable g_AE_StrobeTable =
 {
     AETABLE_STROBE,    //eAETableID
     147,    //u4TotalIndex
@@ -7264,7 +7264,7 @@ static strAETable g_AE_StrobeTable =
     NULL,
 };
 
-static strEvPline sAEScene1PLineTable_60Hz =
+static constexpr strEvPline sAEScene1PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -7470,7 +7470,7 @@ static strEvPline sAEScene1PLineTable_60Hz =
 },
 };
 
-static strEvPline sAEScene1PLineTable_50Hz =
+static constexpr strEvPline sAEScene1PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -7676,7 +7676,7 @@ static strEvPline sAEScene1PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_SceneTable1 =
+static constexpr strAETable g_AE_SceneTable1 =
 {
     AETABLE_SCENE_INDEX1,    //eAETableID
     157,    //u4TotalIndex
@@ -7691,7 +7691,7 @@ static strAETable g_AE_SceneTable1 =
     NULL,
 };
 
-static strEvPline sAEScene2PLineTable_60Hz =
+static constexpr strEvPline sAEScene2PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -7897,7 +7897,7 @@ static strEvPline sAEScene2PLineTable_60Hz =
 },
 };
 
-static strEvPline sAEScene2PLineTable_50Hz =
+static constexpr strEvPline sAEScene2PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -8103,7 +8103,7 @@ static strEvPline sAEScene2PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_SceneTable2 =
+static constexpr strAETable g_AE_SceneTable2 =
 {
     AETABLE_SCENE_INDEX2,    //eAETableID
     122,    //u4TotalIndex
@@ -8118,7 +8118,7 @@ static strAETable g_AE_SceneTable2 =
     NULL,
 };
 
-static strEvPline sAEScene3PLineTable_60Hz =
+static constexpr strEvPline sAEScene3PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -8324,7 +8324,7 @@ static strEvPline sAEScene3PLineTable_60Hz =
 },
 };
 
-static strEvPline sAEScene3PLineTable_50Hz =
+static constexpr strEvPline sAEScene3PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -8530,7 +8530,7 @@ static strEvPline sAEScene3PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_SceneTable3 =
+static constexpr strAETable g_AE_SceneTable3 =
 {
     AETABLE_SCENE_INDEX3,    //eAETableID
     128,    //u4TotalIndex
@@ -8545,7 +8545,7 @@ static strAETable g_AE_SceneTable3 =
     NULL,
 };
 
-static strEvPline sAEScene4PLineTable_60Hz =
+static constexpr strEvPline sAEScene4PLineTable_60Hz =
 {
 {
     {249994,1632,1072, 0, 0, 0},  //TV = 2.00(23619 lines)  AV=2.97  SV=5.50  BV=-0.53
@@ -8751,7 +8751,7 @@ static strEvPline sAEScene4PLineTable_60Hz =
 },
 };
 
-static strEvPline sAEScene4PLineTable_50Hz =
+static constexpr strEvPline sAEScene4PLineTable_50Hz =
 {
 {
     {250005,1632,1072, 0, 0, 0},  //TV = 2.00(23621 lines)  AV=2.97  SV=5.50  BV=-0.53
@@ -8957,7 +8957,7 @@ static strEvPline sAEScene4PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_SceneTable4 =
+static constexpr strAETable g_AE_SceneTable4 =
 {
     AETABLE_SCENE_INDEX4,    //eAETableID
     1,    //u4TotalIndex
@@ -8972,7 +8972,7 @@ static strAETable g_AE_SceneTable4 =
     NULL,
 };
 
-static strEvPline sAEScene5PLineTable_60Hz =
+static constexpr strEvPline sAEScene5PLineTable_60Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -9178,7 +9178,7 @@ static strEvPline sAEScene5PLineTable_60Hz =
 },
 };
 
-static strEvPline sAEScene5PLineTable_50Hz =
+static constexpr strEvPline sAEScene5PLineTable_50Hz =
 {
 {
     {95,1216,1064, 0, 0, 0},  //TV = 13.36(8 lines)  AV=2.97  SV=5.07  BV=11.26
@@ -9384,7 +9384,7 @@ static strEvPline sAEScene5PLineTable_50Hz =
 },
 };
 
-static strAETable g_AE_SceneTable5 =
+static constexpr strAETable g_AE_SceneTable5 =
 {
     AETABLE_SCENE_INDEX5,    //eAETableID
     147,    //u4TotalIndex
@@ -9399,7 +9399,7 @@ static strAETable g_AE_SceneTable5 =
     NULL,
 };
 
-static strEvPline sAESceneReservePLineTable =
+static constexpr strEvPline sAESceneReservePLineTable =
 {
 {
     {0, 0, 0, 0, 0, 0},  //reserved no used
@@ -9605,7 +9605,7 @@ static strEvPline sAESceneReservePLineTable =
 },
 };
 
-static strAETable g_AE_ReserveSceneTable =
+static constexpr strAETable g_AE_ReserveSceneTable =
 {
     AETABLE_SCENE_MAX,    //eAETableID
     0,    //u4TotalIndex
@@ -9620,7 +9620,7 @@ static strAETable g_AE_ReserveSceneTable =
     NULL,
 };
 
-static strAESceneMapping g_AEScenePLineMapping =
+static constexpr strAESceneMapping g_AEScenePLineMapping =
 {
 {
     {LIB3A_AE_SCENE_AUTO, {AETABLE_RPEVIEW_AUTO, AETABLE_CAPTURE_AUTO, AETABLE_VIDEO_AUTO, AETABLE_VIDEO1_AUTO, AETABLE_VIDEO2_AUTO, AETABLE_CUSTOM1_AUTO, AETABLE_CUSTOM2_AUTO,  AETABLE_CUSTOM3_AUTO, AETABLE_CUSTOM4_AUTO, AETABLE_CUSTOM5_AUTO, AETABLE_SCENE_INDEX5}},
@@ -9656,7 +9656,7 @@ static strAESceneMapping g_AEScenePLineMapping =
 },
 };
 
-static strAEPLineTable g_strAEPlineTable =
+static constexpr strAEPLineTable g_strAEPlineTable =
 {
 {
 // PLINE Table
@@ -9713,7 +9713,7 @@ g_AE_ReserveSceneTable,
 },
 };
 
-static strAEPLineNumInfo g_strAEPreviewAutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAEPreviewAutoPLineInfo =
 {
     AETABLE_RPEVIEW_AUTO,
     90,
@@ -9737,7 +9737,7 @@ static strAEPLineNumInfo g_strAEPreviewAutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECaptureAutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAECaptureAutoPLineInfo =
 {
     AETABLE_CAPTURE_AUTO,
     90,
@@ -9761,7 +9761,7 @@ static strAEPLineNumInfo g_strAECaptureAutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEVideoAutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAEVideoAutoPLineInfo =
 {
     AETABLE_VIDEO_AUTO,
     90,
@@ -9785,7 +9785,7 @@ static strAEPLineNumInfo g_strAEVideoAutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEVideo1AutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAEVideo1AutoPLineInfo =
 {
     AETABLE_VIDEO1_AUTO,
     90,
@@ -9809,7 +9809,7 @@ static strAEPLineNumInfo g_strAEVideo1AutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEVideo2AutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAEVideo2AutoPLineInfo =
 {
     AETABLE_VIDEO2_AUTO,
     90,
@@ -9833,7 +9833,7 @@ static strAEPLineNumInfo g_strAEVideo2AutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECustom1AutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAECustom1AutoPLineInfo =
 {
     AETABLE_CUSTOM1_AUTO,
     90,
@@ -9857,7 +9857,7 @@ static strAEPLineNumInfo g_strAECustom1AutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECustom2AutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAECustom2AutoPLineInfo =
 {
     AETABLE_CUSTOM2_AUTO,
     90,
@@ -9881,7 +9881,7 @@ static strAEPLineNumInfo g_strAECustom2AutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECustom3AutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAECustom3AutoPLineInfo =
 {
     AETABLE_CUSTOM3_AUTO,
     90,
@@ -9905,7 +9905,7 @@ static strAEPLineNumInfo g_strAECustom3AutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECustom4AutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAECustom4AutoPLineInfo =
 {
     AETABLE_CUSTOM4_AUTO,
     90,
@@ -9929,7 +9929,7 @@ static strAEPLineNumInfo g_strAECustom4AutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECustom5AutoPLineInfo =
+static constexpr strAEPLineNumInfo g_strAECustom5AutoPLineInfo =
 {
     AETABLE_CUSTOM5_AUTO,
     90,
@@ -9953,7 +9953,7 @@ static strAEPLineNumInfo g_strAECustom5AutoPLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEVideoNightPLineInfo =
+static constexpr strAEPLineNumInfo g_strAEVideoNightPLineInfo =
 {
     AETABLE_VIDEO_NIGHT,
     90,
@@ -9978,7 +9978,7 @@ static strAEPLineNumInfo g_strAEVideoNightPLineInfo =
 };
 
 
-static strAEPLineNumInfo g_strAECaptureISO100PLineInfo =
+static constexpr strAEPLineNumInfo g_strAECaptureISO100PLineInfo =
 {
     AETABLE_CAPTURE_ISO100,
     90,
@@ -10002,7 +10002,7 @@ static strAEPLineNumInfo g_strAECaptureISO100PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECaptureISO200PLineInfo =
+static constexpr strAEPLineNumInfo g_strAECaptureISO200PLineInfo =
 {
     AETABLE_CAPTURE_ISO200,
     90,
@@ -10026,7 +10026,7 @@ static strAEPLineNumInfo g_strAECaptureISO200PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECaptureISO400PLineInfo =
+static constexpr strAEPLineNumInfo g_strAECaptureISO400PLineInfo =
 {
     AETABLE_CAPTURE_ISO400,
     90,
@@ -10050,7 +10050,7 @@ static strAEPLineNumInfo g_strAECaptureISO400PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECaptureISO800PLineInfo =
+static constexpr strAEPLineNumInfo g_strAECaptureISO800PLineInfo =
 {
     AETABLE_CAPTURE_ISO800,
     90,
@@ -10074,7 +10074,7 @@ static strAEPLineNumInfo g_strAECaptureISO800PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAECaptureISO1600PLineInfo =
+static constexpr strAEPLineNumInfo g_strAECaptureISO1600PLineInfo =
 {
     AETABLE_CAPTURE_ISO1600,
     90,
@@ -10098,7 +10098,7 @@ static strAEPLineNumInfo g_strAECaptureISO1600PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEStrobePLineInfo =
+static constexpr strAEPLineNumInfo g_strAEStrobePLineInfo =
 {
     AETABLE_STROBE,
     90,
@@ -10122,7 +10122,7 @@ static strAEPLineNumInfo g_strAEStrobePLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEScene1PLineInfo =
+static constexpr strAEPLineNumInfo g_strAEScene1PLineInfo =
 {
     AETABLE_SCENE_INDEX1,
     90,
@@ -10146,7 +10146,7 @@ static strAEPLineNumInfo g_strAEScene1PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEScene2PLineInfo =
+static constexpr strAEPLineNumInfo g_strAEScene2PLineInfo =
 {
     AETABLE_SCENE_INDEX2,
     90,
@@ -10170,7 +10170,7 @@ static strAEPLineNumInfo g_strAEScene2PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEScene3PLineInfo =
+static constexpr strAEPLineNumInfo g_strAEScene3PLineInfo =
 {
     AETABLE_SCENE_INDEX3,
     90,
@@ -10194,7 +10194,7 @@ static strAEPLineNumInfo g_strAEScene3PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEScene4PLineInfo =
+static constexpr strAEPLineNumInfo g_strAEScene4PLineInfo =
 {
     AETABLE_SCENE_INDEX4,
     90,
@@ -10218,7 +10218,7 @@ static strAEPLineNumInfo g_strAEScene4PLineInfo =
     }
 };
 
-static strAEPLineNumInfo g_strAEScene5PLineInfo =
+static constexpr strAEPLineNumInfo g_strAEScene5PLineInfo =
 {
     AETABLE_SCENE_INDEX5,
     90,
@@ -10241,7 +10241,7 @@ static strAEPLineNumInfo g_strAEScene5PLineInfo =
         {15,0,0,0,0},
     }
 };
-static strAEPLineNumInfo g_strAENoScenePLineInfo =
+static constexpr strAEPLineNumInfo g_strAENoScenePLineInfo =
 {
     AETABLE_SCENE_MAX,
     90,
@@ -10264,7 +10264,7 @@ static strAEPLineNumInfo g_strAENoScenePLineInfo =
         {15,0,0,0,0},
     }
 };
-static strAEPLineInfomation g_strAEPlineInfo =
+static constexpr strAEPLineInfomation g_strAEPlineInfo =
 {
 MFALSE,   // FALSE mean the sampling
 {
@@ -10322,7 +10322,7 @@ g_strAENoScenePLineInfo,
 },
 };
 
-static strAEPLineGainList g_strAEGainList =
+static constexpr strAEPLineGainList g_strAEGainList =
 {
 71,
 {
@@ -10584,7 +10584,7 @@ static strAEPLineGainList g_strAEGainList =
 }
 };
 
-static AE_PLINETABLE_T g_PlineTableMapping =
+static constexpr AE_PLINETABLE_T g_PlineTableMapping =
 {
 g_AEScenePLineMapping,
 g_strAEPlineTable,

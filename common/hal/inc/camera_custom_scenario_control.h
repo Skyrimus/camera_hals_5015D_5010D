@@ -64,7 +64,9 @@ enum class ScenInfoKey
 {
     KEY_SCENARIO = 0,
     KEY_FEATURE_FLAG,
-    KEY_DEVICE_COUNT
+    KEY_DEVICE_COUNT,
+    KEY_CAM_MODE,
+    KEY_CUSTOM_OPTION
 };
 
 bool get_cpu_ctrl(android::KeyedVector<ScenInfoKey, int> scenInfo, android::Vector<CpuCtrlParam>& cpuCtrlParam);

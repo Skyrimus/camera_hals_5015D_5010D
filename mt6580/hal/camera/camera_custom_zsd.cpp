@@ -60,9 +60,18 @@ TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE, OR REFUND ANY SOFTWARE LICE
  ************************************************************************************************/
 
 #include "camera_custom_zsd.h"
+#include <stdlib.h>
+#include <cutils/properties.h>
 
 int get_zsd_cap_stored_frame_cnt(void)
 {
+    char value[PROPERTY_VALUE_MAX];
+    property_get("ro.mtk_gmo_ram_optimize", value, "0");
+    if (atoi(value)) {
+        // capture when touch down for GMO project
+        // the duration between touch down and up is about 70ms = 2 frames
+        return 1;
+    }
     return 3;
 }
 

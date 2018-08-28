@@ -154,7 +154,7 @@ public:
 public:
     virtual INDEX_T const*
     get(
-        MUINT32 const ispProfile, MUINT32 sensor=0, MUINT32 const scene=0, MUINT32 const iso=0
+        MUINT32 ispProfile, MUINT32 sensor=0, MUINT32 const scene=0, MUINT32 const iso=0
     ) const = 0;
 };
 
@@ -224,7 +224,7 @@ private:
 public:
     virtual
     INDEX_T const*
-    get(MUINT32 ispProfile, MUINT32 const sensor/*=-1*/, MUINT32 const scene/*=-1*/, MUINT32 const iso/*=-1*/) const;
+    get(MUINT32 ispProfile, MUINT32 sensor/*=-1*/, MUINT32 const scene/*=-1*/, MUINT32 const iso/*=-1*/) const;
 
 };  //  class IdxSetMgr
 

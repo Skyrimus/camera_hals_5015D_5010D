@@ -62,7 +62,7 @@ TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE, OR REFUND ANY SOFTWARE LICE
 #define LOG_TAG "isp_tuning_custom"
 
 #ifndef ENABLE_MY_LOG
-    #define ENABLE_MY_LOG       (0)
+    #define ENABLE_MY_LOG       (1)
 #endif
 
 #include <aaa_types.h>
@@ -87,6 +87,8 @@ using namespace NSIspTuning;
 #define ISP_TUN_LOG_BIT  (1<<0)
 #define ISP_TUN_EN_BIT1  (1<<1)
 #define ISP_TUN_EN_BIT2  (1<<2)
+
+static MINT32 customRatioLog=0;
 
 /*******************************************************************************
 *
@@ -173,7 +175,8 @@ evaluate_nvram_index(RAWIspCamInfo const& rCamInfo, IndexMgr& rIdxMgr)
 
 //..............................................................................
     //  (1) Dump info. before customizing.
-#if ENABLE_MY_LOG
+#if 0
+//#if ENABLE_MY_LOG
     if (logEn) rCamInfo.dump();
 #endif
 
@@ -1019,6 +1022,8 @@ evaluate_Shading_Ratio  (
         All informations can be obtained via rCamInfo.
         The following sample code shows a shading ratio evaluated by ISO value with temporal smoothness.
     */
+    customRatioLog = property_get_int32("debug.shading.custom.ratio.log", 0);
+
     MINT32 Avg_Frm_Cnt = 5;
     MINT32 i = 0;
     MINT32 i4Rto = 8; //32;
@@ -1037,7 +1042,7 @@ evaluate_Shading_Ratio  (
     total_RA_num_frames_++;
     if (total_RA_num_frames_ < 20){
         avgISO = 8;
-        MY_LOG("[%s] first avgISO = %d\n", __FUNCTION__, avgISO);
+        CAM_LOGD_IF(customRatioLog,"[%s] first avgISO = %d\n", __FUNCTION__, avgISO);
     } else {
         // smooth
         n_frames = ( total_RA_num_frames_ <  Avg_Frm_Cnt) ? (total_RA_num_frames_) : (Avg_Frm_Cnt);
@@ -1046,10 +1051,10 @@ evaluate_Shading_Ratio  (
             avgISO += ISO_Buffer_[k];
         }
         avgISO /= n_frames;
-        MY_LOG("[%s] ISO_Buffer_[] = {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n}", __FUNCTION__,
+        CAM_LOGD_IF(customRatioLog,"[%s] ISO_Buffer_[] = {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n}", __FUNCTION__,
         ISO_Buffer_[0], ISO_Buffer_[1], ISO_Buffer_[2], ISO_Buffer_[3], ISO_Buffer_[4],
         ISO_Buffer_[5], ISO_Buffer_[6], ISO_Buffer_[7], ISO_Buffer_[8], ISO_Buffer_[9] );
-        MY_LOG("[%s] avgISO = %d", __FUNCTION__, avgISO);
+        CAM_LOGD_IF(customRatioLog,"[%s] avgISO = %d", __FUNCTION__, avgISO);
         if (rCamInfo.rFlashInfo.isFlash == 2)
         {
             i4Rto = ratioMapping(i4Iso);

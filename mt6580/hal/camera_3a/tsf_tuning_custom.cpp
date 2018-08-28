@@ -72,17 +72,6 @@ MUINT32
 isEnableTSF(MINT32 const i4SensorDev)
 {
     return 1; // TSF
-    if (i4SensorDev == 1)
-{
-        // 0: LSC
-        // 1: TSF
-        // 2: TSF, flash switch to LSC
-        return 2;
-    }
-    else
-    {
-        return 0;
-    }
 }
 
 MUINT32

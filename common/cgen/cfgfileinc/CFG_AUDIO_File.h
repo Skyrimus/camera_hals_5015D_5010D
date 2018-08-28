@@ -875,12 +875,20 @@ typedef struct
 #define CFG_FILE_AUDIO_AUDENH_CONTROL_OPTION_PAR_TOTAL  1
 
 //for DC Calibration
+#define HP_CALI_NUMS     3
+#define HP_PGA_GAIN_NUMS 8
+#define HP_CH_NUMS       2
+#define HP_CALI_ITEMS    (HP_CALI_NUMS * HP_PGA_GAIN_NUMS * HP_CH_NUMS)
+
 typedef struct _AUDIO_BUFFER_DC_CALIBRATION_STRUCT
 {
     unsigned short cali_flag;
-	unsigned short cali_val_hp_left;
-    unsigned short cali_val_hp_right;
+    short cali_val_dc_offset_left;
+    short cali_val_dc_offset_right;
+    short cali_val_hp_trim_code_left;
+    short cali_val_hp_trim_code_right;
     unsigned short cali_val_speaker;
+    long cali_vals_hp[HP_CALI_ITEMS];
 } AUDIO_BUFFER_DC_CALIBRATION_STRUCT;
 
 

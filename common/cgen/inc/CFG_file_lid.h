@@ -232,7 +232,6 @@ typedef enum
 	AP_CFG_RDCL_CAMERA_FEATURE_LID,
 	AP_CFG_RDCL_CAMERA_GEOMETRY_LID,
 	AP_CFG_RDCL_FILE_MD_SBP_LID,
-#if (defined MT6752) | (defined MT6795) | (defined MT6735) | (defined MT8163) | (defined MT6580) | (defined MT6570) | (defined MT8173)| (defined MT6755) | (defined MT6797) | (defined MT8167) | (defined MT6757) | (defined MT6750) | (defined KIBOPLUS)
     AP_CFG_RDCL_CAMERA_SHADING2_LID,
     AP_CFG_RDCL_CAMERA_SHADING3_LID,
     AP_CFG_RDCL_CAMERA_SHADING4_LID,
@@ -256,14 +255,9 @@ typedef enum
     AP_CFG_RDCL_CAMERA_PLINE10_LID,
     AP_CFG_RDCL_CAMERA_PLINE11_LID,
     AP_CFG_RDCL_CAMERA_PLINE12_LID,
-#else
-#endif
-
-#if  (defined MT6797) | (defined MT6757) | (defined KIBOPLUS)
     AP_CFG_RDCL_CAMERA_AF_LID,
     AP_CFG_RDCL_CAMERA_FLASH_CALIBRATION_LID,
-#else
-#endif
+
 
 	AP_CFG_CUSTOM_BEGIN_LID,  ///Max LID.
 }CFG_FILE_LID;

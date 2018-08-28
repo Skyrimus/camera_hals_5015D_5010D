@@ -111,7 +111,7 @@ sinclude $(TOP)/$(MTK_MTKCAM_PLATFORM)/mtkcam.mk
 #-----------------------------------------------------------
 LOCAL_CFLAGS += $(MTKCAM_CFLAGS)
 
-ifeq ($(CUSTOM_KERNEL_MAIN_IMGSENSOR), imx179_mipi_raw)
+ifneq ($(CUSTOM_KERNEL_MAIN_IMGSENSOR),"imx179_mipi_raw")
     LOCAL_CFLAGS += -DMAIN_IMX179
 endif
 
@@ -119,6 +119,10 @@ ifeq ($(CUSTOM_KERNEL_SUB_IMGSENSOR), gc0310_yuv)
     LOCAL_CFLAGS += -DSUB_GC0310
 endif
 
+
+ifeq ($(CUSTOM_KERNEL_MAIN_IMGSENSOR), imx179_mipi_raw_5mp)
+    LOCAL_CFLAGS += -DMAIN_IMX179_5MP
+endif
 #-----------------------------------------------------------
 LOCAL_C_INCLUDES += $(MTKCAM_C_INCLUDES)
 

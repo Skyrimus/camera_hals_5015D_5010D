@@ -301,6 +301,23 @@ FTABLE_SCENE_INDEP()
     )
 #endif
 #endif
+
+//==========================================================================
+//  Video Stabilization (EIS)
+    FTABLE_CONFIG_AS_TYPE_OF_DEFAULT_SUPPORTED(
+        KEY_AS_(MtkCameraParameters::KEY_VIDEO_STABILIZATION),
+        SCENE_AS_DEFAULT_SCENE(
+            ITEM_AS_DEFAULT_(MtkCameraParameters::FALSE),
+            ITEM_AS_SUPPORTED_(
+#if (1 == EIS_SUPPORTED)
+                MtkCameraParameters::TRUE
+#else
+                MtkCameraParameters::FALSE
+#endif
+            )
+        ),
+    )
+
 //==========================================================================
 END_FTABLE_SCENE_INDEP()
 //------------------------------------------------------------------------------

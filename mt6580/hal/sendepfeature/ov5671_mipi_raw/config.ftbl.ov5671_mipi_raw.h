@@ -223,7 +223,7 @@ else
     FTABLE_CONFIG_AS_TYPE_OF_DEFAULT_VALUES(
         KEY_AS_(MtkCameraParameters::KEY_ANTIBANDING),
         SCENE_AS_DEFAULT_SCENE(
-            ITEM_AS_DEFAULT_(MtkCameraParameters::ANTIBANDING_AUTO),
+            ITEM_AS_DEFAULT_(MtkCameraParameters::ANTIBANDING_OFF),
             ITEM_AS_VALUES_(
                 MtkCameraParameters::ANTIBANDING_OFF,
                 MtkCameraParameters::ANTIBANDING_50HZ,
@@ -245,23 +245,6 @@ if(facing == 0) /*back sensor*/
         ),
     )
 }
-#endif
-    //==========================================================================
-#if 1
-    //  Video Stabilization (EIS)
-    FTABLE_CONFIG_AS_TYPE_OF_DEFAULT_SUPPORTED(
-        KEY_AS_(MtkCameraParameters::KEY_VIDEO_STABILIZATION),
-        SCENE_AS_DEFAULT_SCENE(
-            ITEM_AS_DEFAULT_(MtkCameraParameters::FALSE),
-            ITEM_AS_SUPPORTED_(
-            #if 0
-                MtkCameraParameters::FALSE
-            #else
-                MtkCameraParameters::TRUE
-            #endif
-            )
-        ),
-    )
 #endif
     //==========================================================================
 #if 1
@@ -288,7 +271,9 @@ if(facing == 0) /*back sensor*/
             ITEM_AS_DEFAULT_(MtkCameraParameters::OFF),
             ITEM_AS_VALUES_(
                 MtkCameraParameters::OFF,
+                #if ZSD_MODE_SUPPORT
                 MtkCameraParameters::ON
+                #endif
             )
         ),
     )

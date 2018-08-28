@@ -59,8 +59,8 @@ TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE, OR REFUND ANY SOFTWARE LICE
  *     OF THE STATE OF CALIFORNIA, USA, EXCLUDING ITS CONFLICT OF LAWS PRINCIPLES.
  ************************************************************************************************/
 
-#ifndef _CAMERA_INFO_OV5670RAW_H
-#define _CAMERA_INFO_OV5670RAW_H
+#ifndef _CAMERA_INFO_OV5670FFRAW_H
+#define _CAMERA_INFO_OV5670FFRAW_H
 
 /*******************************************************************************
 *   Configuration

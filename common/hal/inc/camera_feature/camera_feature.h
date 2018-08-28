@@ -42,7 +42,22 @@
 #include "camera_feature_id.h"
 namespace NSFeature
 {
+    /* Include kd_camera_feature_enum anyway */
+#ifdef _KD_CAMERA_FEATURE_ENUM_H_
+
+#undef _KD_CAMERA_FEATURE_ENUM_H_
 #include <kd_camera_feature_enum.h>
+
+#else
+
+#include <kd_camera_feature_enum.h>
+#undef _KD_CAMERA_FEATURE_ENUM_H_
+
+#endif
+
+    /* Unset macro definition */
+#undef  FTYPE_ENUM
+#undef  FID_TO_TYPE_ENUM
 };  //  namespace NSFeature
 
 
