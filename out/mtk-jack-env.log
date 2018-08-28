@@ -1,0 +1,4 @@
+JACK_HOME=/tmp/mtk-jack-mtk13208/.jack-server_50002
+CLIENT_SETTING=/tmp/mtk-jack-mtk13208/.jack-settings_50002
+SERVER_PORT_SERVICE=50002
+SERVER_PORT_ADMIN=50003

@@ -1,0 +1,39 @@
+ifneq ($(MTK_BSP_PACKAGE),yes)
+ifneq ($(MTK_BASIC_PACKAGE),yes)
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := libjni_jpegutil
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_OWNER := mtk
+LOCAL_SRC_FILES := libjni_jpegutil_prebuilt.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := libjni_tinyplanet
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_OWNER := mtk
+LOCAL_SRC_FILES := libjni_tinyplanet_prebuilt.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+
+LOCAL_OVERRIDES_PACKAGES := Camera
+LOCAL_MODULE := Camera2_prebuilt
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_OWNER := mtk
+LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
+LOCAL_JNI_SHARED_LIBRARIES := libjni_jpegutil libjni_tinyplanet
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
+endif
+endif
